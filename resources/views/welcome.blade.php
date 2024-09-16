@@ -5,7 +5,7 @@
 
             <form action="" class="mt-6">
                 <input type="text" placeholder="I'm looking for..."
-                    class="rounded-xl bg-white/5 border border-white/10 py-4 px-5 w-full max-w-xl">
+                    class="rounded-xl bg-white/5 border border-white/10 py-4 px-5 w-full max-w-xl outline-none focus:ring-1 focus:ring-blue-600 transition-all duration-700 ease-out">
             </form>
         </section>
         <section class="pt-10">
