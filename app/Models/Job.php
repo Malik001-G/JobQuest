@@ -10,13 +10,13 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Job extends Model
 {
     use HasFactory;
+    public function tag(){
+        return [];
+    }
 
-    public function user(): BelongsTo
+    public function employer(): BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Employer::class);
     }
-    public function jobs(): HasMany
-    {
-        return $this->hasMany(Job::class);
-    }
+
 }
