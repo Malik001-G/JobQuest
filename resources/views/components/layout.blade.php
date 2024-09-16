@@ -13,8 +13,9 @@
     <div class="px-10">
         <nav class="flex justify-between items-center py-4 border-b border-white/10">
             <div>
-                <a href="/">
-                    <img src="{{Vite::asset('resources/images/logo.svg')}}" alt="">
+                <a href="/" class="flex space-x-2 items-center">
+                    <img src="{{Vite::asset('resources/images/logo.png')}}" alt="" class="w-7">
+                    <p class="font-bold text-lg">Job<span class="text-blue-600 font-extrabold">Quest</span></p>
                 </a>
             </div>
             <div class="space-x-6 font-bold">
