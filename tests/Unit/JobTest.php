@@ -19,5 +19,5 @@ it('can have tags', function () {
     $job = Job::factory()->create();
 
     $job->tag('Frontend');
-    expect($job->tags->toHaveCount(1));
+    expect($job->tags)->toHaveCount(1);
 });
