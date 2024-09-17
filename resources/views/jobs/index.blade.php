@@ -3,10 +3,9 @@
         <section class="text-center pt-6">
             <h1 class="font-bold text-4xl">Let's Find Your Next Job</h1>
 
-            <form action="" class="mt-6">
-                <input type="text" placeholder="I'm looking for..."
-                    class="rounded-xl bg-white/5 border border-white/10 py-4 px-5 w-full max-w-xl outline-none focus:ring-1 focus:ring-blue-600 transition-all duration-700 ease-out">
-            </form>
+            <x-forms.form action="/search" class="mt-6">
+                <x-forms.input :label="false" name="q" placeholder="I'm looking for..." />
+            </x-forms.form>
         </section>
         <section class="pt-10">
             <x-section-heading>Featured Jobs </x-section-heading>
