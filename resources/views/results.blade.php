@@ -5,7 +5,9 @@
         <x-job-card-wide :$job />
         @empty
         <p class="text-white text-center">We couldn’t find any jobs that match your search. <a href="/"
-                class="text-blue-500 hover:underline">Return to the homepage</a> to explore other opportunities.</p>
+                class="text-blue-500 hover:underline hover:transition-all duration-500 ease-linear">Return to the
+                homepage</a>
+            to explore other opportunities.</p>
         @endforelse
     </div>
 </x-layout>
