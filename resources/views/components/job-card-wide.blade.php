@@ -2,12 +2,12 @@
 
 <x-panel class="flex gap-x-6">
     <div>
-        <x-employer-logo />
+        <x-employer-logo :employer="$job->employer" />
     </div>
     <div class="flex-1 flex flex-col">
         <a href="#" class="self-start text-sm text-gray-400">{{$job->employer->name}}</a>
         <h3 class="group-hover:text-blue-600 font-bold transition-colors duration-300 text-xl ">
-            <a href="{{$job->url}}">
+            <a href="{{$job->url}}" target="_blank">
                 {{$job->title}}
             </a>
         </h3>
