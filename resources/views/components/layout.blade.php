@@ -87,34 +87,40 @@
             <div x-ref="tab" :style="handleToggle()"
                 class="relative w-full overflow-hidden transition-all duration-700 lg:hidden max-h-0">
                 <div class="flex flex-col my-3 space-y-2 text-lg hover:font-b text-gray-600">
-                    <a href="#" class="hover:text-gray-900"><span>Link</span></a>
+                    <a href="/jobs" class="hover:text-gray-900"><span>Jobs</span></a>
                     <hr>
-                    <a href="#" class="hover:text-gray-900"><span>Link</span></a>
+                    <a href="#" class="hover:text-gray-900"><span>Career</span></a>
                     <hr>
-                    <a href="#" class="hover:text-gray-900"><span>Link</span></a>
+                    <a href="#" class="hover:text-gray-900"><span>Companies</span></a>
                 </div>
-                <div class="py-6 px-5 space-y-6">
-                    <div class="grid grid-cols-2 gap-y-4 gap-x-8">
-                        <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
-                            About
-                        </a>
 
-                        <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
-                            Contact
-                        </a>
-                    </div>
-                </div>
                 <div>
-                    <a href="#"
-                        class="w-full flex items-center justify-center text-white px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gray-600 hover:bg-gray-700">
-                        Sign up
-                    </a>
-                    <p class="mt-6 text-center text-base font-medium text-gray-500">
-                        Existing customer?
-                        <a href="#" class="text-gray-600 hover:text-gray-900">
+                    @auth
+                    <div class="space-x-6 font-bold flex">
+                        <a href="/jobs/create"
+                            class="whitespace-nowrap text-base font-medium hover:text-gray-300 transition-colors duration-500 text-white">Post
+                            a Job</a>
+
+                        <form method="POST" action="/logout">
+                            @csrf
+                            @method('DELETE')
+                            <button>Log Out</button>
+                        </form>
+                    </div>
+                    @endauth
+                    @guest
+                    <div
+                        class="items-center flex-1 pt-6 justify-center text-lg text-gray-500 lg:pt-0 list-reset lg:flex">
+                        <a href="/login"
+                            class="whitespace-nowrap text-base font-medium hover:text-gray-300 transition-colors duration-500 text-white">
                             Sign in
                         </a>
-                    </p>
+                        <a href="/register"
+                            class=" whitespace-nowrap inline-flex items-center justify-center px-4 py-2  text-base font-medium hover:text-gray-300 transition-colors duration-500 text-white">
+                            Register
+                        </a>
+                    </div>
+                    @endguest
                 </div>
             </div>
             <!-- End toggle menu -->
